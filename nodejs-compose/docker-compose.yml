@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  nodeapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nodejs-compose
+    environment:
+      - PORT=5000
+      - VERSION=v3.2.1
+    ports:
+      - 5055:5000
